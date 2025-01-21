@@ -76,11 +76,12 @@
         Additionally, to set up the build and output settings in Vercel, make sure to:
     </p>
     <ul>
-        <li>Set the <strong>Output Directory</strong> to <code>public</code> in the Vercel dashboard to ensure that the
-            built files are served from the correct directory.</li>
-        <li>In Vercel, under the <strong>Build & Output Settings</strong> section, ensure that the version of Node.js is
-            set to <strong>18.x</strong> or higher (but not the latest version). This is important for compatibility and
-            stability with the packages and dependencies in your Laravel project.</li>
+        <li>Open your Laravel project, then go to <strong>Settings</strong> > <strong>General</strong>, and under the
+            <strong>Build & Development Settings</strong> section, enable and set the <strong>Output Directory</strong>
+            to <code>public</code> to ensure that the built files are served from the correct directory.</li>
+        <li>In Vercel, still within the <strong>General</strong> tab, scroll down to find <strong>Node.js
+                Version</strong> and set it to <strong>18.x or higher</strong> (but not the latest version). This is
+            important for compatibility and stability with the packages and dependencies in your Laravel project.</li>
     </ul>
 
 </body>
