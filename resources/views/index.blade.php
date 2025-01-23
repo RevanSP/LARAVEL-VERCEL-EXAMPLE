@@ -97,7 +97,7 @@
 
     <pre>
         {
-            "X-Powered-By": "PHP/8.1.10"
+            "X-Powered-By": "'PHP/' . phpversion()"
         }
     </pre>
 
