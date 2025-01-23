@@ -76,14 +76,33 @@
         Additionally, to set up the build and output settings in Vercel, make sure to:
     </p>
     <ul>
+        <li>First, create a <code>dist</code> folder in the root directory of your Laravel project. This folder will be
+            used to
+            store any build files or assets that will be served by Vercel.</li>
         <li>Open your Laravel project, then go to <strong>Settings</strong> > <strong>General</strong>, and under the
             <strong>Build & Development Settings</strong> section, enable and set the <strong>Output Directory</strong>
-            to <code>public</code> to ensure that the built files are served from the correct directory.</li>
+            to <code>public</code> to ensure that the built files are served from the correct directory.
+        </li>
         <li>In Vercel, still within the <strong>General</strong> tab, scroll down to find <strong>Node.js
-                Version</strong> and set it to <strong>18.x or higher</strong> (but not the latest version). This is
+                Version</strong>
+            and set it to <strong>18.x or higher</strong> (but not the latest version). This is
             important for compatibility and stability with the packages and dependencies in your Laravel project.</li>
     </ul>
 
+    <p>
+        To test your newly created REST API, you can visit the <code>/api/message</code> route. If you configured the
+        route as shown earlier, visiting <code>https://laravel-vercel-preview.vercel.app/api/message</code> will return a JSON
+        response
+        like this:
+    </p>
+
+    <pre>
+    {
+        "message": "Hello, this is a message from the REST API!"
+    }
+    </pre>
+
 </body>
+
 
 </html>
