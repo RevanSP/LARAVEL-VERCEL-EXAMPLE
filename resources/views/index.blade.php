@@ -90,17 +90,23 @@
     </ul>
 
     <p>
-        To test your newly created REST API, you can visit the <code>/api/message</code> route. If you configured the
-        route as shown earlier, visiting <code>https://laravel-vercel-preview.vercel.app/api/message</code> will return a JSON
-        response
-        like this:
+        To test your newly created REST API, you can visit the <code>/api/api/message</code> route on Vercel.
+        If you configured the route as shown earlier, visiting
+        <code>https://laravel-vercel-preview.vercel.app/api/api/message</code> will return a JSON response like this:
     </p>
 
     <pre>
-    {
-        "message": "Hello, this is a message from the REST API!"
-    }
+        {
+            "X-Powered-By": "PHP/8.1.10"
+        }
     </pre>
+
+    <p>
+        However, when running the application locally, you only need to visit <code>/api/message</code> (without the
+        extra <code>/api</code> prefix).
+        This is because Vercel uses serverless functions with specific routing, whereas Laravel's local development
+        server handles routes directly.
+    </p>
 
 </body>
 

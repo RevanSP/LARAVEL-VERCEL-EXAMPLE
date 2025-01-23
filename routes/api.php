@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/message', function () {
     return response()->json([
-        'message' => 'Hello, this is a message from the REST API!',
+        'X-Powered-By' => 'PHP/' . phpversion()
     ]);
 });
