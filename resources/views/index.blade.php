@@ -97,41 +97,19 @@ foreach ($headers as $header) {
                 </ol>
                 <pre class=" p-4 rounded-md text-sm overflow-x-auto">
 {
-    "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
-    },
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "public/$1"
-        }
-    ],
+   //
+
     "env": {
-        "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://yourprojectdomain.com",
+        //
 
         // Add your APP_KEY here
         "APP_KEY": "",
         // Add your APP_KEY here
 
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
-
-        "CACHE_DRIVER": "array",
-        "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        //
     }
+
+    //
 }
                 </pre>
             </section>
@@ -154,20 +132,26 @@ foreach ($headers as $header) {
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">TESTING YOUR API</h2>
                 <p class="mb-4">
                     To test your newly created REST API, visit the <code
-                        class="bg-[#1C232B] px-1 rounded">/api/api/message</code> route on Vercel.
+                        class="bg-[#1C232B] px-1 rounded">/api/api/status</code> route on Vercel.
                 </p>
                 <p class="mb-4">
                     Example URL: <code
-                        class="bg-[#1C232B] px-1 rounded">https://laravel-vercel-preview.vercel.app/api/api/message</code>
+                        class="bg-[#1C232B] px-1 rounded">https://laravel-vercel-preview.vercel.app/api/api/status</code>
                 </p>
                 <p class="mb-4">Expected JSON response:</p>
                 <pre class=" p-4 rounded-md text-sm overflow-x-auto">
 {
-    "X-Powered-By": "'PHP/' . phpversion()"
+ "X-Powered-By": "'PHP/' . phpversion()",
+  "database": {
+    "status": "'Connected successfully/Connected successfully'",
+    "version": "'$conn->server_info'",
+    "host": "'$host'",
+    "database": "'$database'"
+ }
 }
                 </pre>
                 <p class="mt-4">
-                    Note: When running locally, use <code class="bg-[#1C232B] px-1 rounded">/api/message</code> (without
+                    Note: When running locally, use <code class="bg-[#1C232B] px-1 rounded">/api/status</code> (without
                     the extra <code class="bg-[#1C232B] px-1 rounded">/api</code> prefix).
                 </p>
             </section>
@@ -212,7 +196,6 @@ foreach ($headers as $header) {
                         project and update <code class="bg-[#1C232B] px-1 rounded">.env</code> in Vercel your Laravel
                         project settings.
                         <pre class="p-4 rounded-md text-sm overflow-x-auto">
-DB_CONNECTION=mysql
 DB_HOST=sql.freedb.tech
 DB_PORT=3306
 DB_DATABASE=                // Add your DATABASE NAME here

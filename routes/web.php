@@ -14,8 +14,4 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
 Route::get('/', [Controller::class, 'checkConnection']);
