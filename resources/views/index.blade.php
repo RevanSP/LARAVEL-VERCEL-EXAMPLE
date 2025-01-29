@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LARAVEL VERCEL</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/refs/heads/main/Laravel/LaravelTransparent.png" type="image/png">
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/SAWARATSUKI/KawaiiLogos/refs/heads/main/Laravel/LaravelTransparent.png"
+        type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script>
@@ -59,7 +61,7 @@
         </header>
         <main class="space-y-5">
             <section class=" shadow-md rounded-lg p-6 bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">Response Headers:</h2>
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">RESPONSE HEADERS</h2>
                 <pre class=" p-0 rounded-md text-sm overflow-x-auto">
 <?php
 $headers = headers_list();
@@ -70,9 +72,17 @@ foreach ($headers as $header) {
 ?>
                 </pre>
             </section>
-
+            <section class=" shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">CLONE REPOSITORY</h2>
+                <ol class="list-decimal pl-6 text-white mb-4">
+                    <li>git clone https://github.com/RevanSP/LARAVEL-VERCEL-EXAMPLE.git</li>
+                    <li>cd LARAVEL-VERCEL-EXAMPLE</li>
+                    <li>composer install</li>
+                    <li>cp .env.example .env</li>
+                </ol>
+            </section>
             <section class=" shadow-md rounded-lg p-6  bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">Setting up APP_KEY</h2>
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">SETTING APP_KEY</h2>
                 <p class="mb-4">
                     You must add the <code class="bg-[#1C232B] px-1 rounded">APP_KEY</code> from your <code
                         class="bg-[#1C232B] px-1 rounded">.env</code> file into the <code
@@ -127,7 +137,7 @@ foreach ($headers as $header) {
             </section>
 
             <section class=" shadow-md rounded-lg p-6  bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">Vercel Build Settings</h2>
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">VERCEL BUILD SETTINGS</h2>
                 <ul class="list-disc list-inside space-y-2">
                     <li>Create a <code class="bg-[#1C232B] px-1 rounded">dist</code> folder in the root directory of
                         your
@@ -141,7 +151,7 @@ foreach ($headers as $header) {
             </section>
 
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">Testing Your API</h2>
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">TESTING YOUR API</h2>
                 <p class="mb-4">
                     To test your newly created REST API, visit the <code
                         class="bg-[#1C232B] px-1 rounded">/api/api/message</code> route on Vercel.
@@ -163,7 +173,7 @@ foreach ($headers as $header) {
             </section>
 
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">Connect With MySQL (FREE)</h2>
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">CONNECT WITH MYSQL (FREE)</h2>
                 <p class="mb-4">
                     This free service allows you to connect to a remote MySQL database for testing purposes. Please note
                     that this is not intended for production use, but it provides an easy way to experiment and test
