@@ -208,8 +208,9 @@ foreach ($headers as $header) {
                         <strong>Create a database and user:</strong>
                         Go to your <a href="https://freedb.tech/dashboard/"
                             class="text-secondary">https://freedb.tech/dashboard</a> to create a new database and user.
-                        Then, update your <code class="bg-[#1C232B] px-1 rounded">.env</code> file in your Laravel
-                        project.
+                        Then, update <code class="bg-[#1C232B] px-1 rounded">.env</code> file in your Laravel
+                        project and update <code class="bg-[#1C232B] px-1 rounded">.env</code> in Vercel your Laravel
+                        project settings.
                         <pre class="p-4 rounded-md text-sm overflow-x-auto">
 DB_CONNECTION=mysql
 DB_HOST=sql.freedb.tech
