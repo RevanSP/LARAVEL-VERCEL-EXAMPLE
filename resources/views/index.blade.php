@@ -81,6 +81,35 @@ foreach ($headers as $header) {
                     <li>cp .env.example .env</li>
                 </ol>
             </section>
+
+            <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">TESTING YOUR API</h2>
+                <p class="mb-4">
+                    To test your newly created REST API, visit the <code
+                        class="bg-[#1C232B] px-1 rounded">/api/api/status</code> route on Vercel.
+                </p>
+                <p class="mb-4">
+                    Example URL: <code
+                        class="bg-[#1C232B] px-1 rounded">https://laravel-vercel-preview.vercel.app/api/api/status</code>
+                </p>
+                <p class="mb-4">Expected JSON response:</p>
+                <pre class=" p-4 rounded-md text-sm overflow-x-auto">
+{
+ "X-Powered-By": "'PHP/' . phpversion()",
+  "database": {
+    "status": "'Connected successfully!/Connected failed!'",
+    "version": "'$conn->server_info'",
+    "host": "'$host'",
+    "database": "'$database'"
+ }
+}
+                </pre>
+                <p class="mt-4">
+                    Note: When running locally, use <code class="bg-[#1C232B] px-1 rounded">/api/status</code> (without
+                    the extra <code class="bg-[#1C232B] px-1 rounded">/api</code> prefix).
+                </p>
+            </section>
+
             <section class=" shadow-md rounded-lg p-6  bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">SETTING APP_KEY</h2>
                 <p class="mb-4">
@@ -112,48 +141,6 @@ foreach ($headers as $header) {
     //
 }
                 </pre>
-            </section>
-
-            <section class=" shadow-md rounded-lg p-6  bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">VERCEL BUILD SETTINGS</h2>
-                <ul class="list-disc list-inside space-y-2">
-                    <li>Create a <code class="bg-[#1C232B] px-1 rounded">dist</code> folder in the root directory of
-                        your
-                        Laravel project.</li>
-                    <li>In Vercel, go to <strong>Settings</strong> > <strong>General</strong>, and under <strong>Build &
-                            Development Settings</strong>, set the <strong>Output Directory</strong> to <code
-                            class="bg-[#1C232B] px-1 rounded">public</code>.</li>
-                    <li>Set <strong>Node.js Version</strong> to <strong>18.x or higher</strong> (but not the latest
-                        version).</li>
-                </ul>
-            </section>
-
-            <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
-                <h2 class="text-2xl font-semibold mb-4 text-secondary">TESTING YOUR API</h2>
-                <p class="mb-4">
-                    To test your newly created REST API, visit the <code
-                        class="bg-[#1C232B] px-1 rounded">/api/api/status</code> route on Vercel.
-                </p>
-                <p class="mb-4">
-                    Example URL: <code
-                        class="bg-[#1C232B] px-1 rounded">https://laravel-vercel-preview.vercel.app/api/api/status</code>
-                </p>
-                <p class="mb-4">Expected JSON response:</p>
-                <pre class=" p-4 rounded-md text-sm overflow-x-auto">
-{
- "X-Powered-By": "'PHP/' . phpversion()",
-  "database": {
-    "status": "'Connected successfully/Connected successfully'",
-    "version": "'$conn->server_info'",
-    "host": "'$host'",
-    "database": "'$database'"
- }
-}
-                </pre>
-                <p class="mt-4">
-                    Note: When running locally, use <code class="bg-[#1C232B] px-1 rounded">/api/status</code> (without
-                    the extra <code class="bg-[#1C232B] px-1 rounded">/api</code> prefix).
-                </p>
             </section>
 
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
@@ -219,9 +206,9 @@ DB_PASSWORD=                // Add your PASSWORD here
                     </li>
                 </ol>
 
-                <p class="mb-4">
-                    Congratulations! You have successfully connected a MySQL database to your Laravel project for free.
-                </p>
+            </section>
+            <section class=" shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">DATABASE STATUS</h2>
                 @if (isset($status))
                     @if (strpos($status, 'successfully') !== false)
                         <p class="text-green-500">{{ $status }}</p>
@@ -238,7 +225,7 @@ DB_PASSWORD=                // Add your PASSWORD here
                     <p class="mb-4">Checking connection...</p>
                 @endif
                 <p class="mb-4">
-                    The status above could be either "Connected successfully!" or "Connection failed." As mentioned
+                    The status above could be either "Connected successfully!" or "Connection failed!." As mentioned
                     earlier, this is not suitable for production use, but it is perfect for testing or demo projects.
                 </p>
                 <p class="mb-4">
@@ -246,6 +233,42 @@ DB_PASSWORD=                // Add your PASSWORD here
                     file into base64 (not recommended) in your CRUD Controller logic.
                 </p>
             </section>
+
+            <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">HOSTING ON VERCEL</h2>
+                <ol class="list-decimal pl-6 text-white mb-4">
+                    <li>Create a repo on GitHub and push this code from your repository.</li>
+                    <li>Follow these steps before proceeding to Vercel:</li>
+                    <ol class="list-disc pl-6 text-white">
+                        <li>Open your terminal and navigate to your project folder.</li>
+                        <li>Run the following command to add all your changes:</li>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git add .</code></pre>
+                        <li>Commit your changes with a message describing the changes:</li>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code></pre>
+                        <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code></pre>
+                        <li>Push your changes to GitHub:</li>
+                        <pre><code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code></pre>
+                    </ol>
+                    <li>In Vercel, click "Import Project" and connect your repository from GitHub.</li>
+                    <li>Click "Deploy" to start the process.</li>
+                </ol>
+            </section>
+
+            <section class=" shadow-md rounded-lg p-6  bg-[#15181D]">
+                <h2 class="text-2xl font-semibold mb-4 text-secondary">VERCEL BUILD SETTINGS</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Create a <code class="bg-[#1C232B] px-1 rounded">dist</code> folder in the root directory of
+                        your
+                        Laravel project.</li>
+                    <li>In Vercel, go to <strong>Settings</strong> > <strong>General</strong>, and under <strong>Build &
+                            Development Settings</strong>, set the <strong>Output Directory</strong> to <code
+                            class="bg-[#1C232B] px-1 rounded">public</code>.</li>
+                    <li>Set <strong>Node.js Version</strong> to <strong>18.x or higher</strong> (but not the latest
+                        version) and then redeploy.</li>
+                </ul>
+            </section>
+
         </main>
         <footer class="mt-12 text-center text-gray-600">
             <p>ReiiV. All rights reserved.</p>
