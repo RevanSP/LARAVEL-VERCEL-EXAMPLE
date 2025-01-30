@@ -75,10 +75,11 @@ foreach ($headers as $header) {
             <section class=" shadow-md rounded-lg p-6 bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">CLONE REPOSITORY</h2>
                 <ol class="list-decimal pl-6 text-white mb-4">
-                    <li>git clone https://github.com/RevanSP/LARAVEL-VERCEL-EXAMPLE.git</li>
-                    <li>cd LARAVEL-VERCEL-EXAMPLE</li>
-                    <li>composer install</li>
-                    <li>cp .env.example .env</li>
+                    <li><code class="bg-[#1C232B] px-1 rounded">git clone
+                            https://github.com/RevanSP/LARAVEL-VERCEL-EXAMPLE.git</code></li>
+                    <li><code class="bg-[#1C232B] px-1 rounded">cd LARAVEL-VERCEL-EXAMPLE</code></li>
+                    <li><code class="bg-[#1C232B] px-1 rounded">composer install</code></li>
+                    <li><code class="bg-[#1C232B] px-1 rounded">cp .env.example .env</code></li>
                 </ol>
             </section>
 
@@ -242,13 +243,14 @@ DB_PASSWORD=                // Add your PASSWORD here
                     <ol class="list-disc pl-6 text-white">
                         <li>Open your terminal and navigate to your project folder.</li>
                         <li>Run the following command to add all your changes:</li>
-                        <pre><code class="bg-[#1C232B] px-1 rounded">git add .</code></pre>
+                        <code class="bg-[#1C232B] px-1 rounded">git add .</code>
                         <li>Commit your changes with a message describing the changes:</li>
-                        <pre><code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code></pre>
+                        <code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code>
                         <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
-                        <pre><code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code></pre>
+                        <code class="bg-[#1C232B] px-1 rounded">git remote add origin
+                            https://github.com/your-username/your-repository.git</code>
                         <li>Push your changes to GitHub:</li>
-                        <pre><code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code></pre>
+                        <code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code>
                     </ol>
                     <li>In Vercel, click "Import Project" and connect your repository from GitHub.</li>
                     <li>Click "Deploy" to start the process.</li>
