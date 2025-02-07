@@ -242,13 +242,16 @@ DB_PASSWORD=                // Add your PASSWORD here
                     <li>Follow these steps before proceeding to Vercel:</li>
                     <ol class="list-disc pl-6 text-white">
                         <li>Open your terminal and navigate to your project folder.</li>
+                        <li>Initialize a new Git repository if you haven't already:</li>
+                        <code class="bg-[#1C232B] px-1 rounded">git init</code>
                         <li>Run the following command to add all your changes:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git add .</code>
                         <li>Commit your changes with a message describing the changes:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git commit -m "Your commit message"</code>
+                        <li>Create or rename your branch to `main` (if it’s not already named `main`):</li>
+                        <code class="bg-[#1C232B] px-1 rounded">git branch -M main</code>
                         <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
-                        <code class="bg-[#1C232B] px-1 rounded">git remote add origin
-                            https://github.com/your-username/your-repository.git</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code>
                         <li>Push your changes to GitHub:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code>
                     </ol>
