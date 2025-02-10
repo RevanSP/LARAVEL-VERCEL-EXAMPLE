@@ -80,9 +80,9 @@ foreach ($headers as $header) {
                     <li><code class="bg-[#1C232B] px-1 rounded">cd LARAVEL-VERCEL-EXAMPLE</code></li>
                     <li><code class="bg-[#1C232B] px-1 rounded">composer install</code></li>
                     <li><code class="bg-[#1C232B] px-1 rounded">cp .env.example .env</code></li>
+                    <li><code class="bg-[#1C232B] px-1 rounded">mkdir dist</code></li>
                 </ol>
             </section>
-
             <section class="shadow-md rounded-lg p-6 bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">TESTING YOUR API</h2>
                 <p class="mb-4">
@@ -251,7 +251,8 @@ DB_PASSWORD=                // Add your PASSWORD here
                         <li>Create or rename your branch to `main` (if it’s not already named `main`):</li>
                         <code class="bg-[#1C232B] px-1 rounded">git branch -M main</code>
                         <li>If you haven't connected your local repository to GitHub, you can do so by running:</li>
-                        <code class="bg-[#1C232B] px-1 rounded">git remote add origin https://github.com/your-username/your-repository.git</code>
+                        <code class="bg-[#1C232B] px-1 rounded">git remote add origin
+                            https://github.com/your-username/your-repository.git</code>
                         <li>Push your changes to GitHub:</li>
                         <code class="bg-[#1C232B] px-1 rounded">git push -u origin main</code>
                     </ol>
@@ -263,9 +264,6 @@ DB_PASSWORD=                // Add your PASSWORD here
             <section class=" shadow-md rounded-lg p-6  bg-[#15181D]">
                 <h2 class="text-2xl font-semibold mb-4 text-secondary">VERCEL BUILD SETTINGS</h2>
                 <ul class="list-disc list-inside space-y-2">
-                    <li>Create a <code class="bg-[#1C232B] px-1 rounded">dist</code> folder in the root directory of
-                        your
-                        Laravel project.</li>
                     <li>In Vercel, go to <strong>Settings</strong> > <strong>General</strong>, and under <strong>Build &
                             Development Settings</strong>, set the <strong>Output Directory</strong> to <code
                             class="bg-[#1C232B] px-1 rounded">public</code>.</li>
