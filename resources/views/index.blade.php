@@ -122,7 +122,7 @@ foreach ($headers as $header) {
                 <ol class="list-decimal list-inside space-y-2 mb-4">
                     <li>Generate your <code class="bg-[#1C232B] px-1 rounded">APP_KEY</code> using the command <code
                             class="bg-[#1C232B] px-1 rounded">php artisan key:generate</code></li>
-                    <li>Copy the generated key into the <code class="bg-[#1C232B] px-1 rounded">vercel.json</code> file
+                    <li>Copy the generated key from <code class="bg-[#1C232B] px-1 rounded">.env APP_KEY</code> field into the <code class="bg-[#1C232B] px-1 rounded">vercel.json</code> file
                     </li>
                 </ol>
                 <pre class=" p-4 rounded-md text-sm overflow-x-auto">
